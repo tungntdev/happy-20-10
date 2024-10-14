@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8' />
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
+  name='viewport' />
+<meta content='IE=edge' http-equiv='X-UA-Compatible' />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<link href="./style.css" rel="stylesheet" type="text/css" />
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+
+<head>
+  <title>Happy 20/10</title>
+  <link rel="icon" type="image/x-icon" href="./excited.png">
+  <meta name="description" content="Happy 20/10">
+</head>
+
+<body>
+
+  <!--  Audio di sini -->
+  <audio src="./happy-holiday.mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <!-- Wallpaper --><img src="./gbr/gaduong.jpg" id="wallpaper" />
+    <div id="beneranblur"></div>
+  </div>
+
+  <div id='Content'>
+
+    <div id="kadoIn">
+      <!-- Tombol Surat --><img src="./gbr/gift-box.png" />
+    </div>
+    <p id="ket">Open gift</p>
+
+    <div class="kumpulanstiker">
+      <!-- Stiker untuk Konten -->
+      <img src="./gbr/bunga.gif" id="fotostiker" />
+      <img src="./gbr/pusn.gif" id="fotostiker1" />
+      <img src="./gbr/pandacoklat.gif" id="fotostiker2" />
+      <img src="./gbr/cilukba.gif" id="fotostiker3" />
+      <img src="./gbr/pandakuning.gif" id="fotostiker4" />
+      <img src="./gbr/emawh.gif" id="fotostiker5" />
+
+      <img src="./gbr/pandacoklat.gif" id="fotostiker6" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id='bq' data-text='𝘍𝘳𝘰𝑚 𝑇𝑢𝑛𝑔𝑛𝑡𝑑𝑒𝑣'>
+        <p id="kalimat">Anh có một vài món quà nhỏ cho em nè 😅🎉</p>
+
+        <p id="pesan1">Chạm vào để nhận! (っ ᵔ◡ᵔ)っ🎉</p>
+        <div id="kolombaru">
+          <li id="lv1">🎁</li>
+          <li id="lv2">🎁</li>
+          <li id="lv3">🎁</li>
+          <li id="lv4">🎁</li>
+        </div>
+
+        <p id="pesan2">Hình như là...</p>
+		<!-- Pesan -->
+		<p id="pesan3">À... một ngày đặc biệt đang đến 🌸💐</p>
+		<p id="pesan4">Chúc mừng Ngày Phụ Nữ Việt Nam </p>
+		<p id="pesan5" class="gaya2">Sắp tới là một ngày thật ý nghĩa</p>
+		<p id="pesan6" class="gaya2">Chúc cho những phút giây hạnh phúc và niềm vui tràn đầy luôn bên em 💖🎉</p>
+		<p id="pesan7" class="gaya2">Hãy luôn tỏa sáng và yêu đời nhé!</p>
+
+		<p id="pesan8" class="gaya2">Haha, chỉ là một lời nhắc nhẹ thôi 😄</p>
+		<p id="pesan9" class="gaya2">Mong rằng em sẽ luôn giữ vững đam mê và nhiệt huyết trong tất cả những gì em làm. <br>Mọi chuyện sẽ luôn thuận lợi và những điều tốt đẹp nhất sẽ đến 🌷🌻</p>
+		<p id="pesan10" class="gaya2">Chúc mừng Ngày Phụ Nữ Việt Nam!!! 💐🎉</p>
+
+
+        <!-- Tombol Lanjut -->
+        <p id="opsL">Tiếp tục</p>
+      </blockquote>
+    </div>
+
+    <!-- Tombol Kirim Pesan -->
+    <div id="Tombol"><a id="By">&#128140; Tiếp tục</a></div>
+
+    <!-- Pesan Tambahan -->
+    <p id="katatambahan" class="sembunyi">Nhưng mà anh chưa chuẩn bị.... 😜</p>
+
+    <!-- Pesan Ditolak -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="./gbr/weee.gif" />
+      <p id="kataditolak">Nếu thế thì thôi vậy... 😜</p>
+    </div>
+
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio('' + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = (Math.random() * 90) + "vw";
+      heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove()
+      }
+    }, 100);
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: '#FF0040',
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style = "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500)
+      }
+    }
+
+    async function inipesan() {
+  var nama = 'Hạnh'; // Đặt giá trị trực tiếp
+
+  if (nama && nama.length < 11) {
+    window.nama = nama;
+    vketikhalo = "Hai, " + nama + " ✨";
+    mulainama();
+  } else {
+    await swals.fire('Ups!', '');
+    inipesan();
+  }
+}
+
+    //Variable Pertanyaan Akhir
+    var tanya = 'có muốn nhận quà không nhỉ? 😶🎁';
+    var opstanya = 'Hãy trả lời 😆';
+    var tompositif = 'Có';
+    var tomnegatif = 'Không';
+
+    async function menuju() {
+      pesanwhatsapp = "Cảm ơn vì đã nói điều đó " + nama + " Ngày Phụ Nữ Việt Nam vui vẻ!><";
+      await swals.fire('Có một số điều muốn hỏi em mà...', 'Thui cảm ơn e, anh không làm phiền em nữa! 👋', 'success');
+      //window.location = "https://www.facebook.com/";
+    }
+  </script>
+  <script src="./script.js"></script>
+  <!-- Sampai Sini -->
+</body>
+
+</html>
