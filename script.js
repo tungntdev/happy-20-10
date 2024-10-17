@@ -157,3 +157,6 @@ function initengahan(){
       vketik8="";aktipesan8();
     }
     }
+
+
+  

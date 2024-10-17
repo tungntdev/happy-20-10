@@ -36,7 +36,7 @@
     <div id="kadoIn">
       <!-- Tombol Surat --><img src="./gbr/gift-box.png" />
     </div>
-    <p id="ket">Open gift</p>
+    <p id="ket">Oh! Em mở hộp ra dùm anh được không?</p>
 
     <div class="kumpulanstiker">
       <!-- Stiker untuk Konten -->
@@ -73,7 +73,7 @@
 		<p id="pesan7" class="gaya2">Hãy luôn tỏa sáng và yêu đời nhé!</p>
 
 		<p id="pesan8" class="gaya2">Haha, chỉ là một lời nhắc nhẹ thôi 😄</p>
-		<p id="pesan9" class="gaya2">Mong rằng em sẽ luôn giữ vững đam mê và nhiệt huyết trong tất cả những gì em làm. <br>Mọi chuyện sẽ luôn thuận lợi và những điều tốt đẹp nhất sẽ đến 🌷🌻</p>
+		<p id="pesan9" class="gaya2">Mong rằng em sẽ luôn giữ vững đam mê và nhiệt huyết trong tất cả mọi việc làm.<br>Mọi chuyện sẽ luôn thuận lợi và những điều tốt đẹp nhất sẽ đến 🌷🌻</p>
 		<p id="pesan10" class="gaya2">Chúc mừng Ngày Phụ Nữ Việt Nam!!! 💐🎉</p>
 
 
@@ -93,6 +93,19 @@
       <img id="stikerditolak" src="./gbr/weee.gif" />
       <p id="kataditolak">Nếu thế thì thôi vậy... 😜</p>
     </div>
+
+    <!--Hiển thị ảnh tái bút-->
+    <div id="image-viewer" style="display:none;">
+      <img id="image-display" src="" alt="Image" style="width:100%; height:auto;" />
+      <button id="close-btn">✖</button>
+      <button id="prev-btn" style="position:absolute; left:10px; top:50%; transform:translateY(-50%);">❮</button>
+      <button id="next-btn" style="position:absolute; right:10px; top:50%; transform:translateY(-50%);">❯</button>
+    </div>
+  
+  
+  
+  
+  
 
   </div>
 
@@ -144,7 +157,7 @@
     }
 
     async function inipesan() {
-  var nama = 'Hạnh'; // Đặt giá trị trực tiếp
+  var nama = 'DHH'; // Đặt giá trị trực tiếp
 
   if (nama && nama.length < 11) {
     window.nama = nama;
@@ -167,8 +180,13 @@
       await swals.fire('Có một số điều muốn hỏi em mà...', 'Thui cảm ơn e, anh không làm phiền em nữa! 👋', 'success');
       //window.location = "https://www.facebook.com/";
     }
+
+
+
+
   </script>
   <script src="./script.js"></script>
+  <script src="./scripttaibut.js"></script>
   <!-- Sampai Sini -->
 </body>
 
