@@ -1,11 +1,18 @@
-const images = ['images/IMG_1.jpg', 
-  'images/IMG_2.jpg', 
-  'images/IMG_3.jpg', 
-  'images/IMG_4.jpg', 
-  'images/IMG_5.jpg', 
-  'images/IMG_6.jpg', 
-  'images/IMG_7.jpg', 
-  'images/IMG_8.jpg']; // Add your image paths
+const images = [
+  'images/IMG1.jpg', 
+  'images/IMG2.jpg', 
+  'images/IMG3.jpg', 
+  'images/IMG4.jpg', 
+  'images/IMG5.jpg', 
+  'images/IMG6.jpg', 
+  'images/IMG8.jpg', 
+  'images/IMG9.jpg',
+  'images/IMG10.jpg', 
+  'images/IMG11.jpg', 
+  'images/IMG12.jpg', 
+  'images/IMG14.jpg', 
+  'images/IMG15.jpg',
+]; // Add your image paths
 let currentIndex = 0;
 
 // Function to show an image
